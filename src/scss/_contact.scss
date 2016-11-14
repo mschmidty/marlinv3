@@ -1,0 +1,82 @@
+/*=====================================================================
+
+Contact
+
+==========================================================================*/
+.contact {
+	.left-contact {
+		h4 {
+			text-align:center;
+			margin:1em 0;
+		}
+		.contact-info{
+			padding-top:3em;
+		}
+	}
+	.right-contact {
+		border-left:2px solid $silver;
+	}
+
+	.right-contact, .left-contact {
+		position:relative;
+		h3 {
+			text-decoration: underline;
+			text-align:center;
+			padding:0 0 1em 0;
+		}
+	}
+	.right-contact:after, .left-contact:after {
+		content: ".";
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+	.wpcf7 {
+		padding: 0 0 0 2em; 
+		input {
+			width:100%;
+		}
+		.wpcf7-submit {
+			width:8em;
+			background-color:$grey;
+			border:none;
+			border-bottom:3px solid $silver;
+			padding:.5em;
+			color:$background;
+			font-family:$main-font;
+			font-size:1.25em;
+		}
+	}
+}
+
+@media screen and (max-width:48em) {
+	.contact{
+		.col-1-2 {
+			width:100%;
+		}
+		.wpcf7 {
+			margin-left:0.5em;
+		}
+		.right-contact, .left-contact {
+			float:none;
+		}
+		.right-contact {
+			border:none;
+			border-top:2px solid $silver;
+			h3 {
+				margin-top:1.5em;
+			}
+		}
+		.left-contact {
+			.contact-info {
+				padding:0;
+			}
+			margin-bottom:2em;
+		}
+
+		.wpcf7 {
+			padding:0 2em 0 0;
+		}
+	}
+}

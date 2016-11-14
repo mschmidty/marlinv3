@@ -1,0 +1,90 @@
+/*=====================================================================
+
+Footer
+
+==========================================================================*/
+
+footer {
+	background-color:$silver;
+	position:relative;
+	text-align:center;
+	padding:2em 0;
+	z-index:1;
+	.grid .col {
+		margin-bottom:0 !important;
+	}
+
+	.footer-width {
+		max-width:$max-width;
+		margin:0 auto;
+	}
+
+	.footer-logo img {
+		position:relative;
+		width:100px;
+		height:auto;
+		padding-bottom:2em;
+		margin:0 auto;
+		display:block;
+	}
+	.footer-headquarters {
+		h4 {
+			margin:0;
+			padding:0;
+		}
+	}
+
+	ul {
+		list-style-type:none;
+		text-indent:none;
+		margin:0;
+		padding:0;
+	}
+
+	li {
+		text-decoration:none;
+		text-align:left;
+		margin-left:1em;
+	}
+	.social-media {
+		float:left;
+		h4 {
+			margin:0.5em 0;
+		}
+		li {
+			display:inline-block;
+			margin:0 1em;
+		}
+		a {
+
+			img {
+				width:auto;
+				height:32px;
+				display:block;
+			}
+		}
+	}
+	.menu-nav-container {
+		li {
+			display:inline-block;
+			margin:0 .75em 1em 0;
+		}
+
+		li:last-child {
+			margin: 0 0 1em 0;
+		}
+	}
+	.address-footer {
+		&:first-child {
+			margin-top:0;
+		}
+		h5 {
+			margin:0.5em 0;
+			font-size:1.2em;
+			&:first-of-type {
+				margin-top:0;
+			}
+		}
+	}
+
+}

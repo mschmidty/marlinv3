@@ -1,0 +1,52 @@
+.site-header {
+  display:flex;
+  justify-content:space-between;
+  padding-top:2em;
+}
+header {
+  width:100%;
+}
+.logo {
+  margin:0;
+	h1 {
+    margin:0;
+    padding:0;
+		color:$black;
+    display:block;
+	}
+  a {
+  text-decoration:none;
+  color:$black;
+  }
+  a:visited {
+    color:black;
+  }
+}
+
+
+
+.main-navigation {
+  align-self:flex-end;
+  ul {
+    list-style-type:none;
+    margin-bottom:0;
+  }
+  li {
+    display:inline-block;
+    padding:0.7em 0.7em 0.5em 0.7em;
+  }
+
+  a {
+    text-decoration:none;
+    color:$black;
+    font-size:1.6em;
+    &:hover {
+      color:$red;
+    }
+  }
+
+  .children {
+    display:none;
+  }
+
+}
