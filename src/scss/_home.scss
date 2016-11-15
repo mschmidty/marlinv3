@@ -44,9 +44,19 @@ Banner/Homepage
 			color:$red;
 			font-size:3rem;
 		}
+		@media all and(max-width:600px){
+			position:relative;
+			width:100%;
+			bottom:0;
+			right:0;
+			background:$grey;
+			p, h5 {
+				color:$background;
+			}
+		}
 	}
 }
-.pic-tag {
+/*.pic-tag {
 	float:right;
 	p {
 		margin-top:0.1em;
@@ -61,7 +71,7 @@ Banner/Homepage
 	display: block;
 	height: 0;
 	clear: both;
-}
+} */
 
 .home {
 	padding-bottom:2em;
