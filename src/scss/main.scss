@@ -135,6 +135,13 @@ Main content organization and grid
 	border:none;
 }
 
+.flex-parent {
+	display:flex;
+	flex-wrap:wrap;
+}
+.flex-child {
+	flex:1 0 300px;
+}
 
 
 

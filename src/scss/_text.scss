@@ -1,11 +1,19 @@
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @font-face {
 	font-family: 'bebas_neueregular';
     src: url('font/bebasneueregular-webfont.woff2') format('woff2'),
          url('font/bebasneueregular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+         url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 /*---------------------------------------------------------------------------
 -----========================================================================
@@ -17,7 +25,7 @@ $main-font:'bebas_neueregular';
 body {
 	font-family:$main-font;
 	font-weight:400;
-	
+
 }
 
 h1 {
@@ -44,5 +52,5 @@ h5 {
 p {
 	font-size:1em;
 	letter-spacing:0.05em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'open_sansregular', sans-serif;
 }
