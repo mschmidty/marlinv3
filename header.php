@@ -25,14 +25,18 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
+<div class="content-cover"></div>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="logo">
 			<a href="<?php echo home_url(); ?>"><h1>Durango Shade Co.</h1></a>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+      <a href="#" class="toggle-nav">&#x2261;</a>
+      <div class="menu-nav-container">
+        <a href="#" class="close-toggle">close</a>
+        <h2 class="mobile-nav-header">Navigation</h2>
+  			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'Nav', 'container'=> FALSE) ); ?>
+      </div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

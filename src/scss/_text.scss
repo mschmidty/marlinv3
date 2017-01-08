@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.woff2') format('woff2'),
-         url('opensans-regular-webfont.woff') format('woff');
+    src: url('font/opensans-regular-webfont.woff2') format('woff2'),
+         url('font/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -53,4 +53,5 @@ p {
 	font-size:1em;
 	letter-spacing:0.05em;
 	font-family: 'open_sansregular', sans-serif;
+	font-size:1.125em;
 }
