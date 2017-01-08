@@ -67,13 +67,13 @@ get_header();
 <?php
   $image1 = get_field('image_1');
   $image2 = get_field('image_2');
-  $image3 = get_field('image_1');
+  $image3 = get_field('image_3');
   $text1 = get_field('text_1');
   $text2 = get_field('text_2');
-  $text3 = get_field('text_1');
+  $text3 = get_field('text_3');
   $label1 = get_field('label_1');
   $label2 = get_field('label_2');
-  $label3 = get_field('label_1');
+  $label3 = get_field('label_3');
 
 ?>
 

@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 var	minifycss = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
-var	livereload = require('gulp-livereload');
+//var	livereload = require('gulp-livereload');
 var	rename = require("gulp-rename");
 var cheerio = require('gulp-cheerio');
 var svgstore = require('gulp-svgstore');
@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
     './style.css',
     './*.php'
     ];
- 
+
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
@@ -79,6 +79,3 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['styles', 'scripts','watch', 'images', 'svgstore', 'browser-sync']);
-
-
-

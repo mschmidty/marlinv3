@@ -26,7 +26,12 @@ Products Template
 	top:3px;
 }
 
-
+.products-single {
+	address {
+		clear:both;
+		display:block;
+	}
+}
 
 .gallery-ieon:after {
 	content: ".";
@@ -34,6 +39,11 @@ Products Template
 	display: block;
 	height: 0;
 	clear: both;
+}
+
+.extra-content-products {
+	width:800px;
+	margin:3em auto;
 }
 
 @media screen and (max-width: 35em){
