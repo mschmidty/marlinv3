@@ -54,11 +54,9 @@ Products Template
 		}
 	}
 }
-.products {
-	background:#efefef;
-}
+
 .products-wrap {
-	padding:2em;
+	padding:2em 0;
 	max-width:1200px;
 	margin:0 auto;
 }
@@ -71,7 +69,7 @@ Products Template
 	padding:1em 1em;
 	margin:0.5em;
 	transition:all .3s ease;
-	background:$white;
+	background:#efefef;
 	&:hover {
 		transform:scale(1.1);
 		border:1px solid rgba(0,0,0,0.2);

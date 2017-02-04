@@ -14,7 +14,7 @@ Tags:
 
 $center: 0 auto;
 $content-margin: 0 1em;
-$max-width: 60em;
+$max-width: 40em;
 
 @import 'normalize';
 @import 'color';
@@ -63,7 +63,7 @@ Main content organization and grid
 	width:100%;
 }
 .page {
-	max-width:1600px;
+	max-width:1200px;
 	margin:0 auto;
 }
 .content {
@@ -86,7 +86,6 @@ Main content organization and grid
 	padding:$content-margin;
 }
 .grid{
-		overflow:hidden;
 		width:100%;
 		clear:both;
 		@include clearfix();
