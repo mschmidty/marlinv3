@@ -68,7 +68,7 @@ header {
 }
 
 //should be 550px larger for testing
-@media all and (max-width:700px) {
+@media all and (max-width:720px) {
   .site-header {
     justify-content:flex-start;
     flex-direction:row;
@@ -133,8 +133,9 @@ header {
     .toggle-open {
       position:fixed;
       left:0 !important;
-      height:100%;
       width:80vw;
+      max-height:100vh;
+      overflow-y:auto;
     }
 
     .content-cover {
