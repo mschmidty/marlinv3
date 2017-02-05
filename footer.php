@@ -22,7 +22,7 @@
 
                   </ul>
               </div>
-              <div class="col-1-2 social-media">
+              <div class="col col-1-2 social-media">
               	<ul>
                   <li><a href="https://www.facebook.com/pages/Durango-Shade-Company/220148161468362"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon.png"></a></li>
                   <li><a href="http://instagram.com/durangoshadecompany"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram-icon.png"></a></li>
