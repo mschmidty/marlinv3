@@ -44,23 +44,31 @@ get_header();
     $miscAddInfo = get_field('misc_add_info');
     $miscImage = get_field('misc_upload_image');
   ?>
-  <div class="promotion">
+
       <?php
       if($homeQuote){
       ?>
-      <p> "<?php echo $homeQuote?>" </p>
-      <h5> - <?php echo $homeQuoteAuthor?></h5>
+      <div class="promotion">
+        <p> "<?php echo $homeQuote?>" </p>
+        <h5> - <?php echo $homeQuoteAuthor?></h5>
+      </div>
+      <?php
+      }
+      elseif($couponAddInfo) {
+      ?>
+      <div class="promotion">
+        <h5> <?php echo $couponTime ?></h5>
+        <h3><?php echo $couponAmount ?></h3>
+        <h5><?php echo $couponCategory ?></h5>
+      </div>
       <?php
       }
       else {
-      ?>
-      <h5> <?php echo $couponTime ?></h5>
-      <h3><?php echo $couponAmount ?></h3>
-      <h5><?php echo $couponCategory ?></h5>
-      <?php
-      } ?>
 
-  </div>
+      }
+      ?>
+
+
 </div>
 
 

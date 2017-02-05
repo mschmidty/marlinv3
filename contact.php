@@ -30,9 +30,6 @@ Template Name: contact
 
 	?>
 		<div class="contact-module">
-			<div class="contact-home-left">
-				<img src="<?php echo $thumb; ?>" alt="<?php $image['alt']; ?>">
-			</div>
 			<div class="contact-home-right">
 				<h3><?php echo $name; ?></h3>
 				<p><strong>Areas Served:</strong> <?php echo $area; ?></p>
