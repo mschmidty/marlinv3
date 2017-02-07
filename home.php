@@ -25,7 +25,7 @@ get_header();
     <img sizes="100vw"
     srcset="
 
-      <?php echo $large; ?> 100w,
+      <?php echo $large; ?> 1000w,
       <?php echo $medium; ?> 700w,
       <?php echo $small; ?> 500w"
 
