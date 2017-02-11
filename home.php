@@ -39,10 +39,6 @@ get_header();
     $couponTime = get_field('coupon_time');
     $couponAmount = get_field('coupon_amount');
     $couponCategory = get_field('coupon_category');
-
-    $miscTitleHome  = get_field('misc_title_home');
-    $miscAddInfo = get_field('misc_add_info');
-    $miscImage = get_field('misc_upload_image');
   ?>
 
       <?php
@@ -82,7 +78,6 @@ get_header();
   $label1 = get_field('label_1');
   $label2 = get_field('label_2');
   $label3 = get_field('label_3');
-
 ?>
 
 
@@ -120,6 +115,19 @@ get_header();
 
 <hr>
 
+<?php
+  $miscTitleHome  =   get_field('misc_title_home');
+  $miscAddInfo =      get_field('misc_add_info');
+  $miscImage =        get_field('misc_upload_image');
+  $contact1name =     get_field('name_1');
+  $contact1number =   get_field('number_1');
+  $contact1link =     get_field('link_1');
+  $contact1area =     get_field('area_1');
+  $contact2name =     get_field('name_2');
+  $contact2number =   get_field('number_2');
+  $contact2link =     get_field('link_2');
+  $contact2area =     get_field('area_2');
+ ?>
 <section class="home-misc-section">
   <div class="home-misc-head">
       <h3><?php echo $miscTitleHome ?></h3>
@@ -130,10 +138,24 @@ get_header();
       echo '<img src="' . $miscImage['url'] . '"alt="' .$miscImage['alt'] . '"/>';
       endif;
   ?>
+  <div class="contact-home flex">
+    <?php if(!empty($contact1name )): ?>
+    <div class="flex-item">
+      <a href="<?php echo $contact1link ?>"><h3><?php echo $contact1name ?></h3></a>
+      <p><strong>Areas Served:</strong> <?php echo $contact1area ?></p>
+      <p><strong>Phone:  <?php echo $contact1number ?></strong></p>
+    </div>
+    <div class="flex-item">
+      <a href="<?php echo $contact1link ?>"><h3><?php echo $contact1name ?></h3></a>
+      <p><strong>Areas Served:  </strong> <?php echo $contact1area ?></p>
+      <p><strong>Phone:  <?php echo $contact1number ?></strong></p>
+    </div>
+    <?php endif;?>
+  </div>
 </section>
 
 <?php endwhile; else : ?>
-  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <p><?php echo ( '<p>Sorry, no posts matched your criteria.</p>' ); ?></p>
 <?php endif; ?>
 
 <hr>
