@@ -105,18 +105,3 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
-
-.extra-content-products { /* On the Products Page*/
-  h1, h2, h3, h4, h5, h6 {
-    clear:both;
-  }
-
-  @media all and (max-width:650px) {
-    .alignnone , .aligncenter,
-    div.aligncenter ,.alignright, .alignleft {
-        float: none;
-        display:block;
-        margin: 0 auto;
-    }
-  }
-}

@@ -19,9 +19,7 @@ Template Name: Products Children
 		<?php endwhile; ?>
 	</div>
 </div>
-<hr>
 <div class="extra-content-products">
 	<?php the_field('extra_info') ?>
 </div>
 <?php get_footer(); ?>
-
