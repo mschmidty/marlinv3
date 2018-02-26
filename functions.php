@@ -80,6 +80,24 @@ function marlinv3_0_content_width() {
 }
 add_action( 'after_setup_theme', 'marlinv3_0_content_width', 0 );
 
+
+/**Create Custom Post Type
+function create_post_type() {
+  register_post_type( 'service',
+    array(
+      'labels' => array(
+        'name' => __( 'Services' ),
+        'singular_name' => __( 'Service' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
+**/
+
+
 /**
  * Register widget area.
  *
@@ -167,3 +185,16 @@ require get_template_directory() . '/inc/jetpack.php';
  * Remove Filter
  */
 add_filter('show_admin_bar', '__return_false');
+
+
+
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

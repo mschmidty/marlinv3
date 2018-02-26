@@ -1,3 +1,3 @@
-## A theme for Durango Shade Company
+## MarlinV3 for Durango Shade Comapany
 
 Version: 3.0.0

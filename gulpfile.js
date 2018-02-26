@@ -27,7 +27,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "localhost:8888/durangoshadecompany",
+    proxy: "durangoshadecompany:8888",
     notify: true
     });
 });

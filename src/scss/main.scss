@@ -30,6 +30,8 @@ $max-width: 40em;
 @import 'footer';
 @import 'blog';
 @import 'post';
+@import 'single';
+@import 'employee_bio';
 
 .page-wrap {
 	width:100%;
@@ -63,7 +65,7 @@ Main content organization and grid
 .main {
 	width:100%;
 }
-.page {
+body {
 	max-width:1200px;
 	margin:0 auto;
 }
@@ -82,6 +84,14 @@ Main content organization and grid
 	p {
 		margin-top:.5em;
 	}
+}
+.page-header {
+	text-align:center;
+	background-color:$grey;
+	color:$red;
+	padding:20px 0 15px 0;
+	margin-top:0;
+	vertical-align:middle;
 }
 .content-padding {
 	padding:$content-margin;
@@ -142,10 +152,30 @@ Main content organization and grid
 .flex-parent {
 	display:flex;
 	flex-wrap:wrap;
+	@media(max-width:1200px){
+		padding:0 20px;
+	}
+	.col-2{
+		flex-basis:46.65%;
+		margin:1.65%;
+		@media(max-width:800px){
+			flex-basis:100%;
+		}
+	}
+	.col-3 {
+		flex-basis:30%;
+		margin:1.65%;
+		@media(max-width:850px) and (min-width:625px){
+			flex-basis:46.65%;
+
+		}
+		@media(max-width:625px){
+			flex-basis:100%;
+		}
+	}
 }
-.flex-child {
-	flex:1 0 300px;
-}
+
+
 
 
 

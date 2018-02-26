@@ -31,21 +31,26 @@ body {
 h1 {
 	font-size:3.8em;
 	font-weight:bold;
+	letter-spacing:0.05em;
 }
 
 h2 {
 	font-size:3em;
+	letter-spacing:0.05em;
 }
 h3 {
 	font-size:2em;
+	letter-spacing:0.05em;
 }
 
 h4 {
 	font-size:1.75em;
+	letter-spacing:0.05em;
 }
 
 h5 {
 	font-size:1.5em;
+	letter-spacing:0.05em;
 }
 
 
@@ -54,4 +59,10 @@ p {
 	letter-spacing:0.05em;
 	font-family: 'open_sansregular', sans-serif;
 	font-size:1.125em;
+}
+.entry-header{
+	padding:0;
+}
+.header-padding{
+	padding:1.5%;
 }

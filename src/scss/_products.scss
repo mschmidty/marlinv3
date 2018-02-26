@@ -4,16 +4,19 @@ Products Template
 
 ==========================================================================*/
 
-//Old
-.gallery-icon {
-	float:left;
-	width:19%;
+.gallery{
+	display:flex;
+	justify-content:center;
+}
+.gallery-item {
 	height:auto;
 	margin-right:1%;
 	margin-bottom:.2em;
 	transition: position 3s ease;
 	position:relative;
-
+	&:last-of-type{
+		margin-right:0;
+	}
 
 	img {
 		width:100%;
@@ -31,14 +34,6 @@ Products Template
 		clear:both;
 		display:block;
 	}
-}
-
-.gallery-ieon:after {
-	content: ".";
-	visibility: hidden;
-	display: block;
-	height: 0;
-	clear: both;
 }
 
 .extra-content-products {
@@ -93,9 +88,11 @@ Products Template
 	padding:1em 1em;
 	margin:0.5em;
 	transition:all .3s ease;
-	background:#efefef;
+	background:#fff;
+	box-shadow:0 4px 6px 0 rgba(0,0,0,0.7);
+	border-top:10px solid $black;
 	&:hover {
-		transform:scale(1.1);
+		transform:scale(1.05);
 		border:1px solid rgba(0,0,0,0.2);
 		box-shadow:1px 1px 4px  #ccc;
 	}
@@ -106,7 +103,7 @@ Products Template
 		display:block;
 	}
 	h4 {
-		color:$grey;
+		color:$black;
 		margin:0.5em 0;
 	}
 	p {

@@ -4,6 +4,16 @@ About Template
 
 ==========================================================================*/
 .about {
+	.col{
+		p,h1,h2,h3,h4,h5,ol,ul{
+			max-width:800px;
+			width:95%;
+			margin:0 auto;
+		}
+		>ol, >ul {
+			padding-left:15px;
+		}
+	}
 	.col-1-1 {
 		border-bottom:3px solid $silver;
 		margin-bottom:2em;
@@ -35,6 +45,7 @@ About Template
 	p {
 		margin:1em 3em;
 	}
+
 }
 
 @media screen and (max-width: 38em){

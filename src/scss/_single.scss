@@ -1,0 +1,35 @@
+ .entry-content {
+
+  
+  margin:0 auto 2em auto;
+  text-align:left;
+  img{
+    text-align:center;
+    max-width:100%;
+    height:auto;
+  }
+  hr {
+    margin:2em 0;
+  }
+  p{
+    clear:both;
+  }
+  @media(max-width:800px){
+    p {
+      margin:0 0.5em;
+    }
+  }
+}
+.entry-header h1{
+  text-align:center;
+  font-size:5em;
+}
+
+.post-navigation .nav-links{
+  display:flex;
+  justify-content:center;
+  clear:both;
+  div{
+    padding:1em;
+  }
+}

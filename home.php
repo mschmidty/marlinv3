@@ -50,7 +50,7 @@ get_header();
       </div>
       <?php
       }
-      elseif($couponAddInfo) {
+      elseif($couponTime) {
       ?>
       <div class="promotion">
         <h5> <?php echo $couponTime ?></h5>
@@ -66,7 +66,6 @@ get_header();
 
 
 </div>
-
 
 <?php
   $image1 = get_field('image_1');
@@ -114,7 +113,9 @@ get_header();
 </div>
 
 <hr>
-
+<?php 
+echo do_shortcode('[smartslider3 slider=3]');
+?>
 <?php
   $miscTitleHome  =   get_field('misc_title_home');
   $miscAddInfo =      get_field('misc_add_info');
@@ -158,37 +159,86 @@ get_header();
   <p><?php echo ( '<p>Sorry, no posts matched your criteria.</p>' ); ?></p>
 <?php endif; ?>
 
-<hr>
-
-<!-- rewind-->
-<?php rewind_posts(); ?>
-
-<?php $cause_query = new WP_Query( array(
-        'post_type' => 'cause',
-        'posts_per_page' => 1
-    )); ?>
+<h2 style="text-align: center;">How it Works</h2>
 <?php
-if ($cause_query->have_posts() ) :
-while($cause_query->have_posts()) : $cause_query->the_post(); ?>
-    <?php
-    $causeTitle = get_the_title();
-    $causeLink  = get_field('cause_link');
-    $causeLogo = get_field('cause_logo');
-    $causeDescription = get_field('cause_description');
-    ?>
-    <div class="cause-wrap">
-        <h3 class="cause-title"> <?php echo $causeTitle ?> </h3>
-        <a href="<?php echo $causeLink ?> ">
-            <div class="cause-image">
-                <?php
-                if(!empty($causeLogo)):
-                echo '<img src="' . $causeLogo['url'] . '"alt="' . $cuaseLogo['alt'] . '"/>';
-                endif; ?>
-            </div>
-        </a>
-        <p><?php echo $causeDescription ?></p>
+  $image4 = get_field('image_4');
+  $image5 = get_field('image_5');
+  $image6 = get_field('image_6');
+  $text4 = get_field('text_4');
+  $text5 = get_field('text_5');
+  $text6 = get_field('text_6');
+  $label4 = get_field('label_4');
+  $label5 = get_field('label_5');
+  $label6 = get_field('label_6');
+?>
+
+
+<div class="content-padding content content home">
+  <div class="grid services">
+    <div class="col col-1-3">
+      <?php
+      if( !empty($image4) ): ?>
+        <img src=" <?php echo $image4['url'];?>" alt="<?php echo $image4['alt']; ?>">
+      <?php
+      endif; ?>
+      <h3><?php echo $label4 ?></h3>
+      <p><?php echo $text4 ?></p>
     </div>
-<?php endwhile; endif; ?>
+    <div class="col col-1-3">
+      <?php
+      if( !empty($image5) ): ?>
+        <img src=" <?php echo $image5['url'];?>" alt="<?php echo $image5['alt']; ?>">
+      <?php
+      endif; ?>
+      <h3><?php echo $label5 ?></h3>
+      <p><?php echo $text5 ?></p>
+    </div>
+    <div class="col col-1-3">
+      <?php
+      if( !empty($image6) ): ?>
+        <img src=" <?php echo $image6['url'];?>" alt="<?php echo $image6['alt']; ?>">
+      <?php
+      endif; ?>
+      <h3><?php echo $label6 ?></h3>
+      <p><?php echo $text6 ?></p>
+    </div>
+  </div>
+</div>
+
+<hr>
+	<div class="content about">
+	<div class="grid">
+
+		<?php
+
+			$custom_query = new WP_Query(array(
+			'posts_per_page' => 10,
+			'cat' => '13',
+			'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
+			));
+
+			if ( $custom_query->have_posts() ) :
+			while ( $custom_query->have_posts() ) : $custom_query->the_post();
+			echo '<div class="col col-1-1">';
+
+			if (has_post_thumbnail()) {
+			echo '<div class="about-thumb"><div class="circle">';
+			echo the_post_thumbnail();
+			echo '</div></div>';
+			}
+
+			echo '<h3>' . get_the_title() . '</h3>';
+			echo '<p>' . the_content() .'</p>';
+
+			echo '</div>';
+
+			endwhile;
+			wp_reset_query();
+			endif;
+
+		?>
+	</div> <!--.grid-->
+</div><!--.content.about-->
 
 
 <?php get_footer(); ?>
